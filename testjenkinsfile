@@ -5,7 +5,6 @@ pipeline{
         agent { docker { image 'node:14'}}
         steps{
             sh 'cat /etc/os-release'
-            sh 'exit'
             sh 'apt update'
             sh 'apt install sudo -y'
             sh 'sudo chown -R 995:993 "/.npm"'
